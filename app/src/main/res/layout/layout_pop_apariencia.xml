@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pop_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/titlebar2"
+        android:layout_width="match_parent"
+        android:layout_height="40dip">
+
+        <include layout="@layout/base_titlebar"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/base_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#bdbdbd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/popbarcolor_solid"
+            android:tint="?attr/theme_tint"
+            android:scaleType="centerCrop"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.89" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/apb_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/apa_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/apa_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/apb_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.70" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_preview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="7dp"
+            android:background="#22f0f0f0"
+            app:layout_constraintBottom_toTopOf="@+id/apb_01"
+            app:layout_constraintEnd_toStartOf="@id/apa_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:background="#22ffffff"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:text="Apariencia"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_rostro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/apa_02"
+            app:layout_constraintStart_toEndOf="@+id/apa_01"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rostro"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_rostro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_rostro"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ojos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/apa_02"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color de ojos"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_color_ojos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_color_ojos"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/apb_01"
+            app:layout_constraintEnd_toStartOf="@+id/apa_02"
+            app:layout_constraintStart_toEndOf="@+id/apa_01"
+            app:layout_constraintTop_toBottomOf="@+id/ll_rostro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expresion"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_expresion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_expressions"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/apb_01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/apa_02"
+            app:layout_constraintTop_toBottomOf="@+id/ll_rostro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blush/Sweat"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_blush"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_blush"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tonodepiel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/apa_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apb_01">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tono de Piel"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_tono_piel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_skin"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_altura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pupilas_title"
+            app:layout_constraintEnd_toStartOf="@+id/apa_02"
+            app:layout_constraintStart_toEndOf="@+id/apa_01"
+            app:layout_constraintTop_toBottomOf="@+id/apb_01">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Altura"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_altura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_tam"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tonodebello"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="9dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pupilas_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/apa_02"
+            app:layout_constraintTop_toBottomOf="@+id/apb_01">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tono de Bellos"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_tono_bellos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_cejas"
+                    android:spinnerMode="dialog">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pupilas_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#22ffffff"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="Pupilas"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/ll_tonodepiel" />
+
+        <LinearLayout
+            android:id="@+id/ll_tipo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ll_gradiente"
+            app:layout_constraintEnd_toStartOf="@+id/apa_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pupilas_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_pup_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_pupils"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ll_gradiente"
+            app:layout_constraintEnd_toStartOf="@+id/apa_02"
+            app:layout_constraintStart_toEndOf="@+id/apa_01"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pupilas_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_pup_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_pup_colors"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ll_gradiente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/apa_02"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pupilas_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tamaño"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_pup_tam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_pup_tam"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gradiente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/apb_02"
+            app:layout_constraintEnd_toStartOf="@+id/apa_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_tipo">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gradiente"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sp_background2">
+
+                <Spinner
+                    android:id="@+id/sp_pup_gradiente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffaaaa"
+                    android:padding="5dp"
+                    android:entries="@array/sp_pup_gradient"
+                    android:spinnerMode="dialog">
+
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_idojos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="ID ojos"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_idpups"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apb_02" />
+
+        <TextView
+            android:id="@+id/tv_idpups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="ID pupilas"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_bss"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_idojos" />
+
+        <EditText
+            android:id="@+id/et_eye1"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:inputType="number"
+            android:background="@drawable/sp_background2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:layout_constraintEnd_toStartOf="@id/apa_02"
+            app:layout_constraintStart_toEndOf="@id/apa_01"
+            app:layout_constraintTop_toBottomOf="@+id/apb_02" />
+
+        <EditText
+            android:id="@+id/et_eye2"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:inputType="number"
+            android:background="@drawable/sp_background2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/apa_02"
+            app:layout_constraintTop_toBottomOf="@+id/apb_02" />
+
+        <EditText
+            android:id="@+id/et_pup1"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/sp_background2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@id/cl_bss"
+            app:layout_constraintEnd_toStartOf="@id/apa_02"
+            app:layout_constraintStart_toEndOf="@id/apa_01"
+            app:layout_constraintTop_toBottomOf="@+id/et_eye1" />
+
+        <EditText
+            android:id="@+id/et_pup2"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/sp_background2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@id/cl_bss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/apa_02"
+            app:layout_constraintTop_toBottomOf="@+id/et_eye2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_bss"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#33ababab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guid">
+
+            <LinearLayout
+                android:id="@+id/bt_select"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:background="@drawable/button_states4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:tint="@color/icons_foreground_tint"
+                    app:srcCompat="@drawable/ic_check_black_24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000"
+                    android:textSize="11dp"
+                    android:text="Aceptar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_random"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:background="@drawable/button_states4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bt_select"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:tint="@color/icons_foreground_tint"
+                    android:src="@drawable/dice" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000"
+                    android:textSize="11dp"
+                    android:text="Random"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_rawdata"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:background="@drawable/button_states4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_select"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:tint="@color/icons_foreground_tint"
+                    app:srcCompat="@drawable/ic_developer_board_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000"
+                    android:textSize="11dp"
+                    android:text="E. Datos"/>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,67 @@
+<resources>
+
+    <attr name="theme_tint" format="reference"/>
+    <attr name="theme_tint_buttons" format="reference"/>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="theme_tint">@color/tint_theme_color_default</item>
+        <item name="theme_tint_buttons">@color/tint_theme_color_buttons_default</item>
+
+        <!--Action bar style-->
+        <item name="actionBarSize">35dip</item>
+        <item name="android:actionBarSize">35dip</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="th_aqua" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="theme_tint">@color/tint_theme_color_aqua</item>
+        <item name="theme_tint_buttons">@color/tint_theme_color_buttons_aqua</item>
+    </style>
+
+    <style name="th_green" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="theme_tint">@color/tint_theme_color_green</item>
+        <item name="theme_tint_buttons">@color/tint_theme_color_buttons_green</item>
+    </style>
+
+    <style name="th_red" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="theme_tint">@color/tint_theme_color_red</item>
+        <item name="theme_tint_buttons">@color/tint_theme_color_buttons_red</item>
+    </style>
+
+    <style name="th_pink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="theme_tint">@color/tint_theme_color_pink</item>
+        <item name="theme_tint_buttons">@color/tint_theme_color_buttons_pink</item>
+    </style>
+
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/loading_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressbar_style</item>
+        <item name="android:minHeight">23dip</item>
+        <item name="android:maxHeight">100dip</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="myDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/actionbartextcolor</item>
+    </style>
+
+</resources>

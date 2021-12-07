@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Act_Raw">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="40dip">
+        <include
+            android:id="@+id/include"
+            layout="@layout/base_titlebar" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/basebarcolor"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cl_setbase">
+
+        <TextView
+            android:id="@+id/tv_raw_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Editor de IDs"
+            android:background="#22ffffff"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_raw_title"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap2">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_facepars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_raw_eyes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ojos"
+                    android:textStyle="bold"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_pups"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_pups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pupilas"
+                    android:textStyle="bold"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_eyes"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_faceparsb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_facepars"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <EditText
+                    android:id="@+id/et_raw_eye1"
+                    android:hint="eye1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_eye2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_eye2"
+                    android:hint="eye2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_eye1"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_pup1"/>
+
+                <EditText
+                    android:id="@+id/et_raw_pup1"
+                    android:hint="pup1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_eye2"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_pup2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_pup2"
+                    android:hint="pup2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_pup1"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap1"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap3">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_faceparsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/cl_raw_faceparsd"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_raw_tam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Altura"
+                    android:textStyle="bold"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_skin"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_skin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tono de Piel"
+                    android:textStyle="bold"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_tam"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_cej"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_cej"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cejas"
+                    android:textStyle="bold"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_skin"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_faceparsd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_faceparsc"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <EditText
+                    android:id="@+id/et_raw_tam"
+                    android:hint="height"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_skin"/>
+
+                <EditText
+                    android:id="@+id/et_raw_skin"
+                    android:hint="skin"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_tam"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_cej"/>
+
+                <EditText
+                    android:id="@+id/et_raw_cej"
+                    android:hint="ceja"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_skin"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap2"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap4">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_raw_title_outfit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Outfit"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_bkg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_title_bkg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Background"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_outfit"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_front"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_title_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Front"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_bkg"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_front2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_title_front2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Front2"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_front"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_title1">
+
+                <EditText
+                    android:id="@+id/et_raw_outfit"
+                    android:hint="outfit"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_bkg"/>
+
+                <EditText
+                    android:id="@+id/et_raw_bkg"
+                    android:hint="background"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_outfit"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_front"/>
+
+                <EditText
+                    android:id="@+id/et_raw_front"
+                    android:hint="front"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_bkg"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_front2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_front2"
+                    android:hint="front2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_front"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap3"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap5">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_raw_title_hair1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Front Hair"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_hair2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_title_hair2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Back Hair"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_hair1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_title2">
+
+                <EditText
+                    android:id="@+id/et_raw_hair1"
+                    android:hint="hair1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_hair2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_hair2"
+                    android:hint="hair2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_hair1"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap4"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap6">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_raw_title_hairacc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Front Hair Acc."
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_hairacc2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_title_hairacc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Back Hair Acc."
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_hairacc1"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_hairacc3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_raw_title_hairacc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:text="Extra Hair Acc."
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_hairacc2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title3b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_title3">
+
+                <EditText
+                    android:id="@+id/et_raw_hairacc1"
+                    android:hint="hairacc1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_hairacc2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_hairacc2"
+                    android:hint="hairacc2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_hairacc1"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_hairacc3"/>
+
+                <EditText
+                    android:id="@+id/et_raw_hairacc3"
+                    android:hint="hairacc3"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_hairacc2"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap5"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap7">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title4"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_raw_title_bodyacc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Front Body Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_bodyacc2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_raw_title_bodyacc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back Body Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_bodyacc3"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_bodyacc1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_raw_title_bodyacc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Body Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_bodyacc2"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title4b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_title4">
+
+                <EditText
+                    android:id="@+id/et_raw_bodyacc1"
+                    android:hint="bodyacc1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_bodyacc2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_bodyacc2"
+                    android:hint="bodyacc2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_bodyacc1"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_bodyacc3"/>
+
+                <EditText
+                    android:id="@+id/et_raw_bodyacc3"
+                    android:hint="bodyacc3"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_bodyacc2"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap6"
+            app:layout_constraintBottom_toTopOf="@id/cl_ap8">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title5"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_raw_title_faceacc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Front Face Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_faceacc2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_raw_title_faceacc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back Face Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_faceacc3"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_faceacc1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_raw_title_faceacc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Face Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_faceacc2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title5b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_title5">
+
+                <EditText
+                    android:id="@+id/et_raw_faceacc1"
+                    android:hint="faceacc1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_faceacc2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_faceacc2"
+                    android:hint="faceacc2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_faceacc1"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_faceacc3"/>
+
+                <EditText
+                    android:id="@+id/et_raw_faceacc3"
+                    android:hint="faceacc3"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_faceacc2"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_ap8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_ap7"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title6"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_raw_title_backacc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Front Back Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_backacc2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_raw_title_backacc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back Back Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_raw_title_backacc3"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_backacc1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_raw_title_backacc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Back Acc."
+                    android:textColor="@color/golden_textcolor"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_raw_title_backacc2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_raw_title6b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_raw_title6">
+
+                <EditText
+                    android:id="@+id/et_raw_backacc1"
+                    android:hint="backacc1"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_backacc2"/>
+
+                <EditText
+                    android:id="@+id/et_raw_backacc2"
+                    android:hint="backacc2"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_backacc1"
+                    app:layout_constraintEnd_toStartOf="@id/et_raw_backacc3"/>
+
+                <EditText
+                    android:id="@+id/et_raw_backacc3"
+                    android:hint="backacc3"
+                    android:padding="1dp"
+                    android:background="@drawable/sp_background2"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toEndOf="@id/et_raw_backacc2"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_sets_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.91" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_setbase"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_sets_base">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:tint="?attr/theme_tint"
+            app:srcCompat="@drawable/ic_96_bar" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bars_gradient" />
+
+        <LinearLayout
+            android:id="@+id/bt_raw_share"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:background="@drawable/button_states3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bt_raw_accept"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_share_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:text="Enviar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_raw_accept"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:background="@drawable/button_states3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/bt_raw_share"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_check_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:text="Aceptar"/>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

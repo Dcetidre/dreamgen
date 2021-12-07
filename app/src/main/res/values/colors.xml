@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ee232F58</color>
+    <color name="colorAccent2">#ffd740</color>
+
+    <color name="basebarcolor">#1a2443</color>
+    <color name="popbarcolor">#dd232F58</color>
+    <color name="popbarcolor_disabled">#757575</color>
+    <color name="popbarcolor_solid">#ee232F58</color>
+    <color name="popbarcolor_solid2">#232b58</color>
+    <color name="actionbartextcolor">#ffffff</color>
+    <color name="golden_textcolor">#ffab40</color>
+
+    <color name="tint_theme_color_default">#00098DAA</color>
+    <color name="tint_theme_color_buttons_default">#32437c</color>
+
+    <color name="tint_theme_color_aqua">#88098DAA</color>
+    <color name="tint_theme_color_buttons_aqua">#bb457880</color>
+
+    <color name="tint_theme_color_green">#8839A21B</color>
+    <color name="tint_theme_color_buttons_green">#8835811f</color>
+
+    <color name="tint_theme_color_red">#88BB290F</color>
+    <color name="tint_theme_color_buttons_red">#88802514</color>
+
+    <color name="tint_theme_color_pink">#88AA0992</color>
+    <color name="tint_theme_color_buttons_pink">#88870d75</color>
+
+
+    <color name="main_textbarcolor">#2f3d69</color>
+    <color name="main_setsbackgroundcolor">#bbbeb9b7</color>
+
+    <color name="ActiveBottomNavIconColor">#ffffff</color>
+    <color name="InactiveBottomNavIconColor">#c7c6c6</color>
+
+    <color name="icons_tint">#ffcc40</color>
+    <color name="icons_foreground_tint">#000000</color>
+    <color name="icons_background_tint">#273564</color>
+
+    <color name="icons_warning_tint">#550000</color>
+    <color name="icons_normal_tint">#005500</color>
+
+
+</resources>

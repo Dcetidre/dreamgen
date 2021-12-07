@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.aboutview">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:tint="?attr/theme_tint"
+            android:src="@drawable/ic_96" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/ic_moon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:text="DreamGen"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:text="Version: 1.2.1 (05/10/2020)"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:text="Edición Milanesas"/>
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@color/basebarcolor">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="Atención:"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="#ffffff"
+                        android:background="#1100ffff"
+                        android:text="La aplicación podría tener ciertos errores durante su funcionamiento, si quieres reportar algún error, visíta el blog ddk-z.blogspot.com"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#ffffff"
+                        android:text="- Que es DreamGen?"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#ffffff"
+                        android:text="Es una aplicación para visualizar objetos del juego Dream Girlfriend orientada al diseño e integración de recursos propios junto a los del juego para generar escenas."/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#ffffff"
+                        android:text="Créditos:"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="- Diseño de interfaz y programación: DiegoDDK"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="- Fuente de datos: Archivos Internos de la aplicación, threads archivados de 4chan, la wiki de DG."/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="#ffffff"
+                        android:text="- Fuente de los recursos gráficos: Freepik.com, openclipart.org, svgbackgrounds.com, trianglify.io"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="Esta aplicación utiliza recursos gráficos del juego Dream Girlfriend de Ambition."/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#ffffff"
+                        android:text="La aplicación es gratuita, no monetiza ni utiliza ningún medio publicitario para financiamientos, no requiere permisos extra, solo los listados a continuacion:"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="ACCESO A LA MEMORIA EXTERNA: Para poder guardar las imagenes generadas y acceder a los recursos utilizados para diseñar." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="ACCESO A INTERNET: Para conectarse al servidor del juego Dream Girlfriend y obtener los recursos necesarios." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#ffffff"
+                        android:text="Fuentes detalladas:" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="www.freepik.com -- dark blue star pattern - fondo basado en este recurso." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#ffffff"
+                        android:text="openclipart.org -- Smiling crescent moon - https://openclipart.org/detail/181947/smiling-crescent-moon-by-snifty-181947" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="Visita mi blog: ddk-z.blogspot.com"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="Año 2020"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

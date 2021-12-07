@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">DreamGen</string>
+    <string name="title_activity_items">Items</string>
+    <string name="title_activity_sets">Sets</string>
+
+
+    <!-- Strings de botton navigation view -->
+    <string name="title_item1">Editor</string>
+    <string name="title_item2">Diseñador</string>
+    <string name="title_item3">Acerca de</string>
+
+    <!-- Strings de spinners -->
+
+    <string-array name="sp_rostro">
+        <item>Gentle</item>
+        <item>Innocent</item>
+        <item>Cheeky</item>
+        <item>Regular</item>
+        <item>AngleEyed</item>
+        <item>Kind</item>
+        <item>Bumpkin</item>
+        <item>Bossy</item>
+        <item>Longing</item>
+        <item>Thin AngleEyed</item>
+        <item>Cool</item>
+        <item>Staring</item>
+        <item>Loving</item>
+        <item>Western</item>
+        <item>Pure</item>
+        <item>Boyish</item>
+        <item>HawkEyed</item>
+        <item>Yandere</item>
+        <item>Calm</item>
+        <item>Devilish</item>
+        <item>ThinEyed</item>
+        <item>CatEyed</item>
+        <item>Timid</item>
+        <item>Bright</item>
+        <item>NarrowEyed Yandere</item>
+        <item>Baby</item>
+        <item>Smiling</item>
+        <item>Large Angle</item>
+        <item>Droopy Pure</item>
+        <item>Sanpaku Eyed</item>
+    </string-array>
+
+    <string-array name="sp_color_ojos">
+        <item>Default</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Red/Blue</item>
+        <item>Gold (P)</item>
+        <item>Black (P)</item>
+        <item>Blue (P)</item>
+        <item>Red (P)</item>
+        <item>Green (P)</item>
+        <item>Purple (P)</item>
+        <item>Orange</item>
+        <item>Pink (P)</item>
+        <item>Amber (P)</item>
+        <item>Aqua (P)</item>
+        <item>Emerald</item>
+        <item>Yellow-Pink</item>
+        <item>Pink-Blue</item>
+        <item>Yellow-Purple</item>
+        <item>Blue-Purple</item>
+        <item>Silver-White</item>
+        <item>Yellow-Green</item>
+    </string-array>
+
+    <string-array name="sp_pupils">
+        <item>None</item>
+        <item>Heart</item>
+        <item>Sparkle</item>
+        <item>Star</item>
+        <item>Dollar</item>
+        <item>Yen</item>
+        <item>Rabbit</item>
+        <item>Flower</item>
+        <item>Plus</item>
+        <item>Cross</item>
+        <item>Music Note</item>
+        <item>Cat</item>
+    </string-array>
+
+    <string-array name="sp_expressions">
+        <item>Regular</item>
+        <item>Smiling</item>
+        <item>Grinning</item>
+        <item>Surprised</item>
+        <item>Angry</item>
+        <item>Sad</item>
+        <item>Staring</item>
+        <item>Relaxed</item>
+        <item>Smirking</item>
+        <item>Winking</item>
+        <item>Furious</item>
+        <item>Embarrassed</item>
+        <item>Blank</item>
+        <item>Longing</item>
+        <item>Oh Dear</item>
+        <item>Deceptive</item>
+        <item>Entranced</item>
+        <item>Dazed</item>
+        <item>Sleepy</item>
+        <item>Smug</item>
+        <item>Troubled</item>
+        <item>Sly</item>
+        <item>Frustrated</item>
+        <item>120</item>
+        <item>130</item>
+        <item>140</item>
+    </string-array>
+
+    <string-array name="sp_pup_gradient">
+        <item>None</item>
+        <item>Top to Bottom</item>
+        <item>Bottom to Top</item>
+        <item>Inside to Out</item>
+        <item>Outside to in</item>
+        <item>Dulled</item>
+    </string-array>
+
+    <string-array name="sp_pup_tam">
+        <item>Small</item>
+        <item>Regular</item>
+        <item>Large</item>
+    </string-array>
+
+    <string-array name="sp_pup_colors">
+        <item>Yellow</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="sp_cejas">
+        <item>Base</item>
+        <item>Brown</item>
+        <item>Gray</item>
+        <item>Dark Green</item>
+        <item>Amethyst</item>
+        <item>Russet</item>
+        <item>Puce</item>
+        <item>Ash</item>
+        <item>Light Brown</item>
+        <item>Only Eyeball (dev)</item>
+    </string-array>
+
+    <string-array name="sp_tam">
+        <item>Regular</item>
+        <item>Short</item>
+        <item>Very Short</item>
+    </string-array>
+
+    <string-array name="sp_skin">
+        <item>Regular</item>
+        <item>Pale</item>
+        <item>Tanned</item>
+    </string-array>
+
+    <string-array name="sp_blush">
+        <item>Normal</item>
+        <item>Blushing</item>
+        <item>Sweating</item>
+        <item>Blushing and Sweating</item>
+    </string-array>
+
+    <string-array name="arr_showmode">
+        <item>R. Rápido</item>
+        <item>Render HD</item>
+        <item>Solo Fondo</item>
+        <item>Solo Avatar</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+</resources>
